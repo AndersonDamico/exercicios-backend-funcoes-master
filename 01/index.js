@@ -38,5 +38,11 @@ const corrigirProva = (prova) => {
 
     let notaDaProva = valorPorQuestao * questoesCorreta;
 
-   console.log (`O aluno(a) ${prova.aluno} acertou ${questoesCorretas} questões e obteve nota ${notaDaProva}`)
+    if (questouesCorretas === 0 ) {
+        console.log(`${prova.aluno} não acertou qualquer questão e obteve nota 0`)
+    }else if ( questoesCorretas === 1) {
+        console.log(`O aluno(a) ${prova.aluno} acertou 1 questão e obteve nota ${notaDaProva}`)
+    } else {
+    console.log (`O aluno(a) ${prova.aluno} acertou ${questoesCorretas} questões e obteve nota ${notaDaProva}`)
+    }
 }
